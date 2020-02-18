@@ -3,35 +3,28 @@
 #### 介绍
 echarts-map，中国地图预览，支持下钻至 省-市-区
 
-#### 软件架构
-软件架构说明
 
 
-#### 安装教程
+#### 运行环境
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+下列只需满足 1 或 2  即可运行访问
 
-#### 使用说明
+1. 需在本地搭建http服务，访问 index.html 
+（可用 阿帕奇配置转发代理）
+例如：http://localhost:8080/map/index.html
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+或
 
-#### 参与贡献
+2. 简单快速方法 
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+   2.1.使用谷歌浏览器
 
+   2.2.在谷歌浏览器的快捷方式 目标处添加参数启动
 
-#### 码云特技
+   2.3  -disable-web-security -user-data-dir="d:\Temp"
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+例如:
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" -disable-web-security -user-data-dir="d:\Temp"
+
+​	2.4.打开修改后的谷歌浏览器，再打开 index.html 
+（即用带参数启动的谷歌浏览器访问index.html）

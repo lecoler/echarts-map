@@ -1,0 +1,28 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+body{
+    padding: 20px;
+}
+
+#map{
+    width: 90%;
+    height: 90%;
+    margin: 0 5%;
+    border: 1px dotted #e2e2e2;
+}
+
+#backBtn{
+    width: 100px;
+    font-size: 16px;
+    margin: 20px;
+    padding: 10px 30px;
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+    text-align: center;
+}
