@@ -3,7 +3,7 @@
 #### 介绍
 echarts-map，中国地图预览，支持下钻至 省-市-区
 
-
+[在线预览](https://lecoler.gitee.io/echarts-map)
 
 #### 运行环境
 
