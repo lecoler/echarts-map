@@ -11,6 +11,11 @@ const eCharts = echarts.init($map);
 
 let map = null;
 let recordList = [];
+// 地图默认配置项
+const config = {
+    areaColor: '#EFF7FF',
+    borderColor: '#96C2F1'
+}
 
 // 加载json数据
 function require(src) {
@@ -93,9 +98,9 @@ function getMapSeriesConfig(options = {}) {
             show: true
         },
         itemStyle: {
-            areaColor: '#EFF7FF',
+            areaColor: config.areaColor,
             borderType: 'dotted',
-            borderColor: '#96C2F1'
+            borderColor: config.borderColor
         }
     }, options);
 }
@@ -105,22 +110,23 @@ function toLink(data) {
     switch (data.level) {
         case LEVEL_CHINA:
             createMap();
-            $btn.setAttribute('style', 'display:none');
             break;
         case LEVEL_PROVINCE:
             createProvinceMap(data);
-            $btn.setAttribute('style', 'display:block');
             break;
         case LEVEL_CITY:
             createCityMap(data);
-            $btn.setAttribute('style', 'display:block');
             break;
         case LEVEL_DISTRICT:
             createAreaMap(data);
-            $btn.setAttribute('style', 'display:block');
             break;
     }
-
+    // 是否显示返回按钮
+    if (recordList.length){
+        $btn.setAttribute('style', 'display:block');
+    } else{
+        $btn.setAttribute('style', 'display:none');
+    }
 }
 
 // 返回上级
@@ -265,3 +271,8 @@ async function createAreaMap({id, name, level}) {
     eCharts.hideLoading();
 }
 
+// 设置地图配置
+function setConfig(opt) {
+    eCharts.setOption(opt)
+    eCharts.resize();
+}
