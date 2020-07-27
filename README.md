@@ -58,6 +58,7 @@ echarts-map，中国地图预览，支持下钻至 省-市-区
     })
 ```
 ##### 修改地图配置项
+[配置项文档](https://echarts.apache.org/zh/option.html)  
 **注意：需要在地图渲染完后方可修改**
 ```js
  setConfig({
