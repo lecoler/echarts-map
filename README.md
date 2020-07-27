@@ -28,3 +28,59 @@ echarts-map，中国地图预览，支持下钻至 省-市-区
 
 ​	2.4.打开修改后的谷歌浏览器，再打开 index.html 
 （即用带参数启动的谷歌浏览器访问index.html）
+
+
+#### 方法api
+##### 默认生成地图
+```js
+    // 生成中国地图
+    createMap()
+```
+##### 生成省级地图
+```js
+    // 生成广东省地图
+    createProvinceMap({
+        id: '440000',
+        name: '广东省',
+        level: LEVEL_PROVINCE,
+        back: false
+    })
+```
+
+##### 生成市级地图
+```js
+    // 生成广州市地图
+    createCityMap({
+        id: '440100',
+        name: '广州市',
+        level: LEVEL_CITY,
+        back: false
+    })
+```
+##### 修改地图配置项
+**注意：需要在地图渲染完后方可修改**
+```js
+ setConfig({
+            series: [
+                {
+                    itemStyle: {
+                        areaColor: '#91a9fc',
+                    }
+                }
+            ]
+        })
+```
+地图渲染完成后修改地图区块颜色
+```js
+    createMap().then(() => {
+        setConfig({
+            series: [
+                {
+                    itemStyle: {
+                        areaColor: '#91a9fc',
+                    }
+                }
+            ]
+        })
+    })
+```
